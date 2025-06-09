@@ -1,0 +1,309 @@
+/* Services Page Specific Styles */
+.page-header {
+    background: linear-gradient(135deg, var(--burgundy-950), var(--burgundy-800));
+    color: var(--cream);
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    color: var(--champagne-100);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Services Overview */
+.services-overview {
+    padding: 5rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--burgundy-950);
+    position: relative;
+}
+
+.service-card.featured {
+    border-top: 4px solid var(--champagne-950);
+    transform: scale(1.02);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card.featured:hover {
+    transform: scale(1.02) translateY(-8px);
+}
+
+.service-icon {
+    background-color: var(--burgundy-950);
+    color: var(--champagne-950);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.service-card.featured .service-icon {
+    background-color: var(--champagne-950);
+    color: var(--burgundy-950);
+}
+
+.service-card h3 {
+    color: var(--burgundy-950);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    margin-bottom: 1.5rem;
+    color: var(--burgundy-700);
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    color: var(--burgundy-600);
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.925rem;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--champagne-950);
+    font-weight: bold;
+}
+
+.service-pricing {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--burgundy-950);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--blush);
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.service-card.featured .service-pricing {
+    background: var(--champagne-100);
+    color: var(--burgundy-950);
+}
+
+/* Service Process */
+.service-process {
+    padding: 5rem 0;
+    background: var(--burgundy-50);
+}
+
+.service-process h2 {
+    text-align: center;
+    color: var(--burgundy-950);
+    margin-bottom: 3rem;
+}
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+}
+
+.process-step {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon {
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    background: var(--burgundy-950);
+    color: var(--champagne-950);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.step-content h3 {
+    color: var(--burgundy-950);
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    color: var(--burgundy-700);
+}
+
+/* Service Modal */
+.service-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--burgundy-700);
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--burgundy-950);
+}
+
+.modal-content h3 {
+    color: var(--burgundy-950);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.service-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.service-form input,
+.service-form select,
+.service-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--blush);
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-form input:focus,
+.service-form select:focus,
+.service-form textarea:focus {
+    outline: none;
+    border-color: var(--burgundy-500);
+    box-shadow: 0 0 0 3px rgba(114, 47, 55, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card.featured {
+        transform: none;
+    }
+    
+    .service-card.featured:hover {
+        transform: translateY(-8px);
+    }
+    
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        margin: 0 1rem;
+    }
+    
+    .service-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .service-icon svg {
+        width: 36px;
+        height: 36px;
+    }
+}
